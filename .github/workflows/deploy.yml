@@ -36,10 +36,10 @@ jobs:
   deploy:
     needs: build
     environment:
-    name: github-pages
-    url: ${{ steps.deployment.outputs.page_url }}
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: windows-latest  # Use Windows runner
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4 
+        uses: actions/deploy-pages@v4
